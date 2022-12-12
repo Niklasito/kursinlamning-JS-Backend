@@ -1,0 +1,26 @@
+.showMovieMovieContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+
+.showMovieMovieTitle {
+  color: #f8e80c;
+}
+
+.showMovieMovieInfo {
+  color: white;
+  padding: 40px 200px 40px 200px;
+}
+
+.showMovieMovieVoteAvg {
+  color: white;
+  margin-top: auto;
+}
+
+.showMovieMovieReleaseDate {
+  color: white;
+  flex: end;
+}

@@ -1,0 +1,63 @@
+.popMovieCont {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.popMovieHeadingCont {
+  margin: 30px 0 10px 0;
+  color: #f8e80c;
+}
+
+.popHeading {
+  font-weight: 3000;
+}
+
+.movieTitles {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  max-height: 20px;
+  font-weight: 600;
+  color: white;
+
+}
+
+.carouselCont {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  justify-content: center;
+  border: 3px solid #f8e80c;
+  background-color: rgb(0, 0, 0);
+
+}
+
+
+.posterDiv {
+  height: 300px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.posterImage {}
+
+.btnDiv {
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #f8e80c;
+  color: black;
+  font-weight: 600;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #bbaf02;
+}

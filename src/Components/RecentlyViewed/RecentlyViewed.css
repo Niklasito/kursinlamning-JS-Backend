@@ -1,0 +1,14 @@
+.recentContentDiv {
+  display: flex;
+  flex-direction: column;
+  width: 217px;
+}
+
+.recentHeadingCont {
+  margin: 20px 0 10px 0;
+  color: white;
+}
+
+.recentPosterDiv {
+  margin-top: 40px;
+}
