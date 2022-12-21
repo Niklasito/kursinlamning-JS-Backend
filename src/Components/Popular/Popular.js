@@ -28,18 +28,20 @@ const useEffectFetchPopular = (props) => {
         <div className="carouselCont">
           <Carousel cols={5} rows={1} gap={1} loop>
             {popularMovies.map((image) => {
-              const { title, poster_path, id, overview } = image;
+              const { title, poster_path, id, } = image;
               return (
                 <Carousel.Item key={id}>
                   <div>
-                    <h6 className="movieTitles">{title}</h6>
+                    <Link to={`/movies/${id}`}
+                      className="movieTitles"
+                      onClick={() => props.addToRecent(image)}
+                    >{title}</Link>
                   </div>
                   <div className="posterDiv">
                     <Link to={`/movies/${id}`}
                       className="posterImg"
                       onClick={() => props.addToRecent(image)
-                        //() =>
-                        //   localStorage.setItem(id, JSON.stringify(image))
+
                       }
                     >
                       <img
@@ -49,9 +51,6 @@ const useEffectFetchPopular = (props) => {
                         className="posterImage"
                       />
                     </Link>
-                  </div>
-                  <div className="btnDiv">
-                    <Link to={`/movies/${id}`} className="btn btn-primary">Details</Link>
                   </div>
                 </Carousel.Item>
               );

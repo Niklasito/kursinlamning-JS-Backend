@@ -2,14 +2,13 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faSearch } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Navbar({ searchingText, setSearchingText }) {
 
-  // const searching = useNavigate()
+
 
   const updateSearchingText = (e) => {
-    // searching('/search')
     setSearchingText(e.target.value)
 
   }
