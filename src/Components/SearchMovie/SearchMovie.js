@@ -4,16 +4,21 @@ import "./SearchMovie.css"
 import { Link } from "react-router-dom";
 import noimg from '../../img/noimg.jpg';
 
+const hideSearchField = () => {
+  let searchBarField = document.querySelector(".searchDiv");
+  searchBarField.style.display = "none";
+  let resultDiv = document.querySelector(".resultDiv");
+  resultDiv.style.display = "none";
+};
 
+const SearchMovie = ({ props, results, addToRecent }) => {
 
-const SearchMovie = ({ props, results, image, addToRecent }) => {
-
-  const foundMovies = results.map((obj, i) => {
+  const foundMovies = results.map((obj,) => {
 
     const movieDetails = `/movies/${obj.id}`
     const poster_path = `https://image.tmdb.org/t/p/w500${obj.poster_path}`
     return (
-      <Link to={movieDetails} key={obj.id} className="searchDiv col-12" onClick={() => addToRecent(obj)}>
+      <Link to={movieDetails} key={obj.id} className="searchDiv col-12" onClick={() => { addToRecent(obj); hideSearchField(); }}>
         <div className="imgBox" onClick={() => props.addToRecent(obj)} >
           <img key={obj.id} src={obj.poster_path === null ? noimg : poster_path} alt={obj.title} className="poster" />
         </div>
